@@ -21,10 +21,24 @@ class Student {
       
     }
     string getGrade() {
-    
+      float totalMark = getTotalMark();
+      if(totalMark >= 75) {
+        return "A";
+      } else if(totalMark >= 65) {
+        return "B";
+      } else if(totalMark >= 55) {
+        return "C";
+      } else if(totalMark >= 45) {
+        return "D";
+      } else {
+        return "E";
+      }
     }
     void printResult() {
-
+      cout<<"Name: "<<studentName<<endl;
+      cout<<"Matrix Number: "<<matrixNumber<<endl;
+      cout<<"Total Mark: "<<getTotalMark()<<endl;
+      cout<<"Grade: "<<getGrade()<<endl;
     }
     
 }
